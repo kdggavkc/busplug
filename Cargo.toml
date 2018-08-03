@@ -1,0 +1,15 @@
+[package]
+name = "busplug"
+version = "0.1.0"
+authors = ["kdggavkc"]
+
+[dependencies]
+reqwest = "0.8.6"
+regex = "1"
+actix-web = "0.7.2"
+chrono = "0.4"
+lazy_static = "1.0.2"
+actix = "0.7.2"
+handlebars = "1.0.0"
+serde = "1.0.70"
+serde_json = "1.0.24"

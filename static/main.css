@@ -1,0 +1,71 @@
+// fonts {}
+
+@font-face {
+    font-family: HelveticaNeueBd;
+    src: url(HelveticaNeueBd.ttf);
+    }
+
+@font-face {
+    font-family: HelveticaNeueHv;
+    src: url(HelveticaNeueHv.ttf);
+    }
+
+@font-face {
+    font-family: HelveticaNeueMed;
+    src: url(HelveticaNeueMed.ttf);
+    }
+
+// generics {}
+
+body {
+    background-color: #2b303b;
+    }
+h1 {
+    display: inline;
+    }
+h2 {
+    display: inline;
+    font-size: 68px;
+    font-family: HelveticaNeueHv;
+    }
+
+// h1 classes {}
+
+h1.special_title {
+    color: #E0CA3C;
+    font-family: HelveticaNeueBd;
+    font-size: 90;
+    font-weight: bold
+    }
+
+h1.special_locale {
+    color: #BF211E;
+    font-family: HelveticaNeueMed;
+    font-size: 68;
+    }
+
+// h2 classes {}
+
+h2.stopid {
+    color: #BF211E;
+    }
+h2.data {
+    font-size: 300px;
+    color: #00FFC5;
+    }
+
+// div classes {}
+
+div.special_title_container {
+    position: absolute;
+    right: 100px;
+    top: 55%;
+   }
+div.stopname {
+    text-align: left;
+    color: #98D2EB;
+    }
+div.datacontainer {
+    text-align: center;
+    position: relative;
+    }
