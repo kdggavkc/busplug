@@ -9,7 +9,7 @@ use std::sync::Mutex;
 use reqwest::Client;
 use chrono::prelude::*;
 
-const API_KEY: &str = env::var("BUSPLUG_API_KEY").expect("Missing env var `MY_KEY`");
+const API_KEY: &str = &env::var("BUSPLUG_API_KEY").expect("Missing env var `MY_KEY`");
 
 struct Record {
     timestamp: DateTime<Utc>,
