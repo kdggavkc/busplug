@@ -9,7 +9,7 @@ use std::sync::Mutex;
 use reqwest::Client;
 use chrono::prelude::*;
 
-const API_KEY: &str = &env::var("BUSPLUG_API_KEY").expect("Missing env var `MY_KEY`");
+
 
 struct Record {
     timestamp: DateTime<Utc>,
@@ -38,7 +38,8 @@ macro_rules! regex { ($re:expr) => { ::regex::Regex::new($re).unwrap() } }
 
 // String formats API KEY and STOP ID into URL BASE. Returns complete url for get request.
 fn construct_url(stop_id: String) -> String {
-    format!("http://www.ctabustracker.com/bustime/api/v2/getpredictions?key={}&stpid={}", API_KEY.to_string(), stop_id)
+    let api_key: String = env::var("BUSPLUG_API_KEY").expect("Missing env var `MY_KEY`");
+    format!("http://www.ctabustracker.com/bustime/api/v2/getpredictions?key={}&stpid={}", api_key, stop_id)
 }
 
 fn get_string_from_match<'a>(capture: &'a regex::Captures) -> &'a str {
